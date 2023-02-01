@@ -3,6 +3,7 @@ import { Routes, Route, NavLink } from 'react-router-dom'
 import ContextHook from './ContextHook.tsx/ContextHook'
 import EffectsHook from './EffectsHook/EffectsHook'
 import ReactHooks from './ReactHooks'
+import ReducerHook from './ReducerHook/ReducerHook'
 import RefHook from './RefHook/RefHook'
 import StateHook from './StateHook/StateHook'
 
@@ -74,6 +75,18 @@ function App() {
                                         useContext hook
                                    </NavLink>
                               </li>
+                              <li className="nav-item">
+                                   <NavLink
+                                        className={({ isActive }) =>
+                                             isActive
+                                                  ? 'activeClassName'
+                                                  : undefined
+                                        }
+                                        to="reducer-hook"
+                                   >
+                                        useReducer hook
+                                   </NavLink>
+                              </li>
                          </ul>
                     </div>
                </nav>
@@ -83,6 +96,7 @@ function App() {
                     <Route path="effect-hook" element={<EffectsHook />} />
                     <Route path="ref-hook" element={<RefHook />} />
                     <Route path="context-hook" element={<ContextHook />} />
+                    <Route path="reducer-hook" element={<ReducerHook />} />
                </Routes>
           </div>
      )

@@ -10,8 +10,8 @@ const RefHook: React.FC<RefHookProps> = () => {
           console.log(box)
           console.log(box.current)
           console.log(box.current.value)
-          // box.current.style.backgroundColor = 'dodgerblue'
-          // box.current.value = 'Thank you'
+          box.current.style.backgroundColor = 'dodgerblue'
+          box.current.value = 'Thank you'
      }
      useEffect(() => {
           box.current.focus()

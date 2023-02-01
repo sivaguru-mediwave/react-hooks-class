@@ -13,19 +13,19 @@ const EffectsHook: React.FC<EffectsHookProps> = () => {
      //  }, [])
 
      // ***** Cleanup useEffects
-     // const [state, setState] = useState(window.innerWidth)
-     // console.log(state)
-     // const resizeD = () => {
-     //      setState(window.innerWidth)
-     // }
+     const [state, setState] = useState(window.innerWidth)
+     console.log(state)
+     const resizeD = () => {
+          setState(window.innerWidth)
+     }
 
-     // useEffect(() => {
-     //      window.addEventListener('resize', resizeD)
-     //      return () => {
-     //           window.removeEventListener('resize', resizeD)
-     //           console.log('removed')
-     //      }
-     // }, [state])
+     useEffect(() => {
+          window.addEventListener('resize', resizeD)
+          return () => {
+               window.removeEventListener('resize', resizeD)
+               console.log('removed')
+          }
+     }, [state])
 
      // ***** The effect will run after every state update
      // useEffect(() => {
@@ -138,7 +138,7 @@ const EffectsHook: React.FC<EffectsHookProps> = () => {
                          </p>
                          <br />
                          <br />
-                         {/* <h5>Window with: {state}</h5> */}
+                         <h5>Window with: {state}</h5>
                     </div>
                </div>
           </div>
